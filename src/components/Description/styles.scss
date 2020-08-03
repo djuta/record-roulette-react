@@ -1,0 +1,11 @@
+@import "../../styles/include.scss";
+.description {
+  p {
+    margin-bottom: $space-1;
+  }
+  ol {
+    list-style: decimal;
+    margin-left: $space-3;
+    margin-bottom: $space-1;
+  }
+}

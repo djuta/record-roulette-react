@@ -1,0 +1,24 @@
+@import "../../styles/include.scss";
+.badge-card {
+  height: $space-4;
+  display: flex;
+  padding: $space-0;
+  box-sizing: content-box;
+  align-items: center;
+  &__image {
+    border: $border-color-0;
+    height: $space-4;
+    width: $space-4;
+    background-size: cover;
+    background-position: center;
+  }
+  &__title {
+    padding: 0 $space-1;
+    flex: 1;
+    @include truncate;
+  }
+  .icon-button {
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../styles/include.scss";
+.big-button {
+  width: 100%;
+  font-size: $font-size-3;
+  padding: $space-1;
+  border: none;
+  color: #fff;
+  background: $color-primary;
+  border-radius: $space-0;
+  &:disabled {
+    color: rgba(255, 255, 255, 0.25);
+  }
+  &:hover:not(:disabled) {
+    background: $color-primary-dark;
+  }
+}

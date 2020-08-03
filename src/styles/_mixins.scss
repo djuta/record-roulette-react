@@ -1,0 +1,11 @@
+@mixin truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin mobile-breakpoint() {
+  @media (max-width: 767px) {
+    @content;
+  }
+}

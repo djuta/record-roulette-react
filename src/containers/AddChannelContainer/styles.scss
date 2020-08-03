@@ -1,0 +1,22 @@
+@import "../../styles/include.scss";
+.add-channel-container {
+  &__input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    input {
+      padding: $space-0 + $space-1;
+      font-size: $font-size-2;
+      flex: 1;
+      height: $space-4;
+      border: $border-color-0;
+      margin-right: $space-1;
+    }
+    .icon-button {
+      flex-shrink: 0;
+    }
+    &--loading .icon-button {
+      animation: spin 1s linear infinite;
+    }
+  }
+}

@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Provider } from "react-redux";
+import store from "./store";
+import Header from "./components/GlobalHeader";
+
+import "./App.scss";
+import AddChannelContainer from "./containers/AddChannelContainer";
+import ChannelContainer from "./containers/ChannelContainer";
+import UpNextVideoContainer from "./containers/UpNextVideoContainer";
+import VideoContainer from "./containers/VideoContainer";
+import GlobalMessageContainer from "./containers/GlobalMessageContainer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App" id="app">
+        <Header />
+        <div className="content-wrapper">
+          <div className="content-wrapper__channels">
+            <AddChannelContainer />
+            <ChannelContainer />
+          </div>
+          <div className="content-wrapper__main">
+            <VideoContainer />
+            <UpNextVideoContainer />
+          </div>
+          <GlobalMessageContainer />
+        </div>
+      </div>
+    </Provider>
   );
 }
 

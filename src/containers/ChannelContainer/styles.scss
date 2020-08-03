@@ -1,0 +1,25 @@
+@import "../../styles/include.scss";
+.channel-container {
+  &__selected {
+    border: $border-color-0;
+  }
+  .big-button {
+    margin-top: $space-1;
+  }
+  &__mobile-button {
+    display: none;
+    @include mobile-breakpoint {
+      display: block;
+      bottom: $space-2;
+      right: $space-2;
+      position: fixed;
+      z-index: 998;
+      .icon-button {
+        box-shadow: $box-shadow;
+        height: $space-5;
+        width: $space-5;
+        background-size: $space-3;
+      }
+    }
+  }
+}
